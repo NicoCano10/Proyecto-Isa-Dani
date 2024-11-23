@@ -1,24 +1,33 @@
 import { Instagram } from "lucide-react";
-import { Card } from "antd";
+import { Avatar, Card } from "antd";
 import "./index.css";
 export default function Component() {
   const cakes = [
     {
       name: "Torta SANTA LULADA",
       subtitle: "NUESTRA TORTA INSIGNIA",
-      image: "/placeholder.svg?height=80&width=80",
+      image:
+        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta lulada",
     },
     {
       name: "Torta MARACUMANGO",
-      image: "/placeholder.svg?height=80&width=80",
+      image:
+        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta maracumango",
     },
     {
       name: "Torta CHONTADURO",
-      image: "/placeholder.svg?height=80&width=80",
+      image:
+        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta chontaduro",
     },
     {
       name: "Torta FRUTOS ROJOS",
-      image: "/placeholder.svg?height=80&width=80",
+      image:
+        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+
+      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta frutos rojos",
     },
   ];
 
@@ -27,25 +36,34 @@ export default function Component() {
       <div className="mx-auto max-w-md space-y-4">
         {/* Profile Section */}
         <div className="text-center">
+          {/* Quita el div de abajo por un Avatar */}
+          {/* <Avatar className="flex h-full items-center justify-center text-white">
+         </Avatar> */}
           <div className="mx-auto h-24 w-24 overflow-hidden rounded-full bg-[#6B7D6A]">
             <div className="flex h-full items-center justify-center text-white">
               <span className="text-xl font-semibold">SANTA VERA</span>
             </div>
           </div>
+
           <h1 className="mt-4 text-2xl font-bold">Santa Vera Pastelería</h1>
           <p className="mt-2 text-gray-600">📍 Cali - Colombia</p>
-          <p className="mt-2 text-gray-800">
-            Pastelería gourmet y natural con Sabores Colombianos 💛
-            <span className="ml-1">💙❤️</span>
+          <p className="mt-2 text- flex text-sm text-gray-800">
+            Pastelería gourmet y natural con Sabores Colombianos 💛💙❤️
           </p>
           <div className="mt-4 flex justify-center space-x-4">
-            <a href="#" className="text-gray-600 hover:text-gray-900">
-              <Instagram className="h-6 w-6" />
+            <a
+              href="https://www.instagram.com/xx_elnico10_xx/?igsh=MTZzY3dqc3V0aTlvZw%3D%3D"
+              className="text-gray-600 hover:text-gray-900"
+            >
+              <Instagram color="#DD2A7B" className="h-6 w-6" />
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-900">
+            <a
+              href="https://www.tiktok.com/@elnico1051"
+              className="text-gray-600 hover:text-gray-900"
+            >
               <svg
                 className="h-6 w-6"
-                fill="currentColor"
+                fill="#000000"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -69,15 +87,20 @@ export default function Component() {
         {/* Cakes List */}
         <div className="space-y-3">
           {cakes.map((cake, index) => (
-            <Card key={index} className="overflow-hidden">
-              <a to="#" className="flex items-center gap-4 p-4">
+            <Card
+              key={index}
+              className="overflow-hidden"
+              cover={
                 <img
                   src={cake.image}
                   alt={cake.name}
-                  width={80}
-                  height={80}
                   className="rounded-lg object-cover"
                 />
+              }
+            >
+              <a href={cake.text} className="flex items-center gap-4 p-4">
+                {/* Aqui cambia el tamaño de las imagenes y lo que ocupan */}
+
                 <div>
                   <h3 className="font-semibold">{cake.name}</h3>
                   {cake.subtitle && (
@@ -98,19 +121,11 @@ export default function Component() {
           <p className="text-sm text-gray-600">NO LLAMADAS (CRM)</p>
         </Card>
 
-        {/* Terms */}
-        <a
-          href="#"
-          className="block rounded-lg border-2 border-gray-200 bg-white p-4 text-center"
-        >
-          Términos & Condiciones
-        </a>
-
         {/* Footer */}
         <div className="py-6 text-center">
           <img
             src="/placeholder.svg?height=50&width=150"
-            alt="Beacons"
+            alt="footer"
             width={150}
             height={50}
             className="mx-auto"
