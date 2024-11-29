@@ -8,7 +8,7 @@ import logo4 from "../assets/Foto4.jpeg";
 export default function Component() {
   const cakes = [
     {
-      name: "Torta SANTA LULADA",
+      name: "Torta PALACIO DE CRISTAL",
       subtitle: "NUESTRA TORTA INSIGNIA",
       image: logo,
       text: "https://wa.me/573175082124?text=Hola estoy interesado en una torta lulada",
