@@ -1,33 +1,35 @@
 import { Instagram } from "lucide-react";
-import { Avatar, Card } from "antd";
+import { Card } from "antd";
 import "./index.css";
+import logo from "../assets/Foto1.jpeg";
+import logo2 from "../assets/Foto2.jpeg";
+import logo3 from "../assets/Foto3.jpeg";
+import logo4 from "../assets/Foto4.jpeg";
 export default function Component() {
   const cakes = [
     {
-      name: "Torta SANTA LULADA",
+      name: "Torta PALACIO DE CRISTAL",
       subtitle: "NUESTRA TORTA INSIGNIA",
-      image:
-        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta lulada",
+      image: logo,
+      text: "https://wa.me/573175082124?text=Hola estoy interesado en una torta lulada",
     },
     {
       name: "Torta MARACUMANGO",
-      image:
-        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta maracumango",
+      subtitle: "TORTA MARACULOVERS",
+      image: logo2,
+      text: "https://wa.me/573164208920?text=Hola estoy interesado en una torta maracumango",
     },
     {
       name: "Torta CHONTADURO",
-      image:
-        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta chontaduro",
+      subtitle: "TORTA CHONTADULOVERS",
+      image: logo3,
+      text: "https://wa.me/573175082124?text=Hola estoy interesado en una torta chontaduro",
     },
     {
       name: "Torta FRUTOS ROJOS",
-      image:
-        "https://images.pexels.com/photos/29483366/pexels-photo-29483366/free-photo-of-delicioso-pastel-de-frambuesa-con-tetera.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-
-      text: "https://wa.me/573215365328?text=Hola estoy interesado en una torta frutos rojos",
+      subtitle: "TORTA REDLOVERS",
+      image: logo4,
+      text: "https://wa.me/573164208920?text=Hola estoy interesado en una torta frutos rojos",
     },
   ];
 
@@ -39,26 +41,26 @@ export default function Component() {
           {/* Quita el div de abajo por un Avatar */}
           {/* <Avatar className="flex h-full items-center justify-center text-white">
          </Avatar> */}
-          <div className="mx-auto h-24 w-24 overflow-hidden rounded-full bg-[#6B7D6A]">
+          <div className="mx-auto h-40 w-40 overflow-hidden rounded-full bg-[#FFC0CB]">
             <div className="flex h-full items-center justify-center text-white">
-              <span className="text-xl font-semibold">SANTA VERA</span>
+              <span className="text-xl font-semibold">PALACIO DE CRISTAL</span>
             </div>
           </div>
 
-          <h1 className="mt-4 text-2xl font-bold">Santa Vera Pastelería</h1>
+          <h1 className="mt-4 text-2xl font-bold">El Palacio de Cristal Reposteria</h1>
           <p className="mt-2 text-gray-600">📍 Cali - Colombia</p>
           <p className="mt-2 text- flex text-sm text-gray-800">
-            Pastelería gourmet y natural con Sabores Colombianos 💛💙❤️
+            Reposteria gourmet y natural con Sabores Internacionales 💛💙❤️
           </p>
           <div className="mt-4 flex justify-center space-x-4">
             <a
-              href="https://www.instagram.com/xx_elnico10_xx/?igsh=MTZzY3dqc3V0aTlvZw%3D%3D"
+              href="https://www.instagram.com/el_palacio_de_cristal1/profilecard/?igsh=MXVvaWZodXd5bDA1eA=="
               className="text-gray-600 hover:text-gray-900"
             >
               <Instagram color="#DD2A7B" className="h-6 w-6" />
             </a>
             <a
-              href="https://www.tiktok.com/@elnico1051"
+              href="https://www.tiktok.com/@palaciodecristal2?_t=8reDhk215tw&_r=1"
               className="text-gray-600 hover:text-gray-900"
             >
               <svg
@@ -106,7 +108,7 @@ export default function Component() {
                   {cake.subtitle && (
                     <p className="text-sm text-gray-600">{cake.subtitle}</p>
                   )}
-                  <p className="text-sm text-primary">Comprar por página web</p>
+                  <p className="text-sm text-primary">Tomar Pedido con Asesor</p>
                 </div>
               </a>
             </Card>
@@ -115,16 +117,18 @@ export default function Component() {
 
         {/* Customer Service */}
         <Card className="p-4 text-center">
+          <a href="https://wa.me/573175082124?text=Hola estoy interesado en una torta!">
           <h3 className="text-lg font-semibold">
-            Atención en línea con un asesor
+            Atención en línea con un Asesor
           </h3>
-          <p className="text-sm text-gray-600">NO LLAMADAS (CRM)</p>
+          <p className="text-sm text-gray-600">LLAMADAS (3175082124)</p>
+          </a>
         </Card>
 
         {/* Footer */}
         <div className="py-6 text-center">
           <img
-            src="/placeholder.svg?height=50&width=150"
+            src="\Icono.jpeg"
             alt="footer"
             width={150}
             height={50}
